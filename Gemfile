@@ -1,5 +1,4 @@
-#source ENV['GEM_SOURCE'] ||
-"https://rubygems.org"
+source "https://rubygems.org"
 
 group :test do
   gem "rake"
