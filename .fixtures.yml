@@ -1,0 +1,5 @@
+fixtures:
+  repositories:
+    stdlib: git://github.com/voxpupuli/puppet-archive.git
+  symlinks:
+    midserver: "#{source_dir}"

@@ -1,0 +1,52 @@
+<%- |
+  String $name,
+  String $username,
+  String $password,
+  String $instance,
+| -%>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- **********************************
+     *    MID Server Configuration    *
+     * This file is managed by Puppet *
+     ********************************** -->
+
+<parameters>
+
+  <!-- ***********************
+       * REQUIRED Parameters *
+       *********************** -->
+
+       <parameter name="url" value="<%= $instance %>" />
+       <parameter name="mid.instance.username" value="<%= $username %>" />
+       <parameter name="mid.instance.password" value="<%= $password %>" encrypt="true"/>
+       <parameter name="name" value="<%= $name %>"/>
+
+  <!-- ******************************
+       * COMMON OPTIONAL Parameters *
+       ****************************** -->
+
+       <parameter name="threads.max" value="25"/>
+       <!--
+       <parameter name="instance.date.format" value="yyyy-MM-dd HH:mm:ss"/>
+       <parameter name="glide.mid.max.sender.queue.size" value="0.5 gigabytes"/>
+       <parameter name="mid.proxy.use_proxy" value="true"/>
+       <parameter name="mid.proxy.host" value="YOUR_PROXY_HOST"/>
+       <parameter name="mid.proxy.port" value="YOUR_PROXY_PORT"/>
+       <parameter name="mid.proxy.username" value="YOUR_PROXY_USER_NAME"/>
+       <parameter name="mid.proxy.password" value="YOUR_PROXY_PASSWORD" encrypt="true"/>
+       <parameter name="glide.mid.autoupgrade.proxy_host"     value="YOUR_UPGRADE_PROXY_HOST"     />
+       <parameter name="glide.mid.autoupgrade.proxy_port"     value="YOUR_UPGRADE_PROXY_PORT"     />
+       <parameter name="glide.mid.autoupgrade.proxy_user"     value="YOUR_UPGRADE_PROXY_USER"     />
+       <parameter name="glide.mid.autoupgrade.proxy_password" value="YOUR_UPGRADE_PROXY_PASSWORD" />
+       -->
+
+  <!-- ***********************************
+       * LESS COMMON OPTIONAL Parameters *
+       *********************************** -->
+
+  <!-- *********************************************************
+       * REQUIRED Parameters that are AUTOMATICALLY filled in. *
+       ********************************************************* -->
+       <parameter name="mid_sys_id" value=""/>
+
+</parameters>
